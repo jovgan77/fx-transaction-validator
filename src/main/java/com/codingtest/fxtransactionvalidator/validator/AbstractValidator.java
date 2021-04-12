@@ -4,12 +4,12 @@ import com.codingtest.fxtransactionvalidator.validator.check.Check;
 import com.codingtest.fxtransactionvalidator.validator.result.CumulativeResult;
 import lombok.RequiredArgsConstructor;
 
-import java.util.List;
+import java.util.Set;
 
 @RequiredArgsConstructor
-public abstract class Validator<T> {
+public abstract class AbstractValidator<T> {
 
-    private final List<Check<T>> checks;
+    private final Set<Check<T>> checks;
 
     public CumulativeResult validate(T object) {
         final CumulativeResult result = new CumulativeResult(object);

@@ -7,19 +7,19 @@ import com.codingtest.fxtransactionvalidator.validator.check.CurrencyPairFormatC
 import com.codingtest.fxtransactionvalidator.validator.check.ExcerciseStartDateCheck;
 import com.codingtest.fxtransactionvalidator.validator.check.IsExpiryDateBeforeDeliveryDateCheck;
 import com.codingtest.fxtransactionvalidator.validator.check.IsPremiumDateBeforeDeliveryDateCheck;
-import com.codingtest.fxtransactionvalidator.validator.check.SupportedCustomerCheck;
 import com.codingtest.fxtransactionvalidator.validator.check.IsValueDateAfterTradeDateCheck;
 import com.codingtest.fxtransactionvalidator.validator.check.IsValueDateWorkingDayCheck;
+import com.codingtest.fxtransactionvalidator.validator.check.SupportedCustomerCheck;
 import com.codingtest.fxtransactionvalidator.validator.check.VanillaOptionStyleCheck;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
+import java.util.Set;
 
 @Component(FxTransactionType.VANILLA_OPTION)
-public class VanillaOptionTxValidator extends Validator<VanillaOptionFxTransaction> {
+public class VanillaOptionTxAbstractValidator extends FxTransactionAbstractValidator<VanillaOptionFxTransaction> {
 
-    public VanillaOptionTxValidator(ValidationProperties properties) {
-        super( List.of(
+    public VanillaOptionTxAbstractValidator(ValidationProperties properties) {
+        super( Set.of(
                 new CurrencyPairFormatCheck<>(),
                 new IsValueDateAfterTradeDateCheck<>(),
                 new IsValueDateWorkingDayCheck<>(),

@@ -3,3 +3,9 @@ validation:
 
 application:
   await-termination-seconds: 30
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui

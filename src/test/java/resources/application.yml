@@ -1,0 +1,5 @@
+validation:
+  supported-customers: 'YODA1,YODA2'
+
+application:
+  await-termination-seconds: 30
