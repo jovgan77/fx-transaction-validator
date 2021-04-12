@@ -41,10 +41,15 @@ For scaling purposes we could use Docker and Kubernetes.
 
 ## Build
 
- * ./gradlew clean build
+ ```
+./gradlew clean build
+```
 
 ## Run
-* ./gradlew bootRun
+
+```
+./gradlew bootRun
+```
 
 ## Swagger UI
 
